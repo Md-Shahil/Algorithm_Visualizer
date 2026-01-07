@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* dark navy */
+    color: #e5e7eb;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #1e293b;
+}
+
+.navbar h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+}
+
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.container p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+
+    padding: 16px 20px;
+    margin-bottom: 40px;
+}
+
+/* Algoritm box */
+select {
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid #1e293b;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #2563eb;
+}
+
+.secondary {
+    background-color: #020617;
+    color: #e5e7eb;
+    border: 1px solid #1e293b;
+}
+
+.secondary:hover {
+    background-color: #020617;
+}
+
+/* Array bars border */
+#array {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 370px;              
+    gap: 4px;
+    padding: 10px;
+    background-color: #020617;
+    border-radius: 8px;
+}
+
+/* Array Bars */
+.bar {
+    width: 18px;                
+    background-color: #38bdf8;  
+    border-radius: 2px;
+    will-change: height;
+}
+
+.slider-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input[type="range"] {
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+button.primary,
+button.secondary {
+  height: 40px;          /* fixed height */
+  padding: 0 16px;       /* horizontal padding only */
+  font-size: 14px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Div box (Algorithm, speed, size) */
+.controls-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Start and reset buttom */
+.controls-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Size Button */
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Metrics (Comparisons, Swaps, Time) */
+.metrics {
+    display: flex;
+    gap: 16px;              /* space between items */
+    margin-top: 16px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
