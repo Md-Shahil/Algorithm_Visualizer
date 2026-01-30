@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sorting Visualizer</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/sorting.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="sorting.html">Sorting</a>
+        <a href="pathfinding.html">Pathfinding</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h2>Sorting Visualizer</h2>
+      <p>Visualize sorting algorithms step by step</p>
+
+      <!-- Control Section -->
+      <div class="controls">
+        <!-- LEFT SIDE CONTROLS -->
+        <div class="controls-left">
+          <div class="slider-group">
+            <span class="slider-label">ALGORITHM</span>
+            <select id="algo">
+              <option value="bubble">Bubble Sort</option>
+              <option value="selection">Selection Sort</option>
+              <option value="insertion">Insertion Sort</option>
+              <option value="merge">Merge Sort</option>
+              <option value="quick">Quick Sort</option>
+              <option value="heap">Heap Sort</option>
+            </select>
+          </div>
+
+          <label class="slider-label">
+            Speed
+            <input type="range" id="speed" min="10" max="300" value="100" />
+          </label>
+
+          <!-- Size button structure -->
+          <label class="slider-label">
+            <div class="label-row">
+              <span>Size:</span>
+              <span id="sizeValue">30</span>
+            </div>
+            <input
+              type="range"
+              id="size"
+              min="10"
+              max="100"
+              step="10"
+              value="30"
+            />
+          </label>
+        </div>
+
+        <!-- RIGHT SIDE BUTTONS -->
+        <div class="controls-right">
+          <button class="primary" id="start">Start</button>
+          <button class="secondary" id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <span>Comparisons: <strong id="comparisons">0</strong></span>
+        <span>Swaps: <strong id="swaps">0</strong></span>
+        <span>Time: <strong id="time">0 ms</strong></span>
+      </div>
+
+      <!-- already correct -->
+      <div id="array"></div>
+    </main>
+
+    <!-- JS at bottom = correct -->
+    <script src="../javascript/sorting_design.js"></script>
+    <script src="../javascript/sorting.js"></script>
+  </body>
+</html>
+<!-- hggvjgvlyg -->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/pathfinding.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="sorting.html">Sorting</a>
+        <a href="pathfinding.html">Pathfinding</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="header-section">
+        <h1> Pathfinding Visualizer</h1>
+        <p>
+          Watch how different algorithms map the route from start to finish.
+        </p>
+        <p class="instruction-text">
+          Pick your <span class="origin-text">Origin</span>, set a
+          <span class="target-text">Target</span>, and block paths with
+          <span class="obstacle-text">Obstacles</span>.
+        </p>
+      </div>
+
+      <div class="main-control-panel">
+        <select id="algorithm-select">
+          <option value="BFS">BFS</option>
+          <option value="DFS">DFS</option>
+          <option value="Dijkstra">Dijkstra</option>         
+          <option value="IDDFS">Iterative Deepening DFS</option>         
+          <option value="GreedyBFS">Greedy BFS</option>         
+          <option value="AStar">A *</option>         
+        </select>
+        <button id="random-maze-btn">Random Maze</button>
+        <button id="visualize-btn">Visualize</button>
+        <button id="reset-btn"> Reset</button>
+      </div>
+
+      <div class="grid-window">
+        <div id="grid-container"></div>
+      </div>
+    </main>
+
+    <script type="module" src="../javascript/pathfindig.js"></script>
+
+  </body>
+</html>
+
+
