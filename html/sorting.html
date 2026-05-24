@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sorting Visualizer</title>
+
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/sorting.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <a href="index.html" class="logo-link">
+        <div class="logo">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span class="logo-name">AlgoFlow</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <div id="nav-box"></div>
+        <a href="index.html" id="home"> <i class="bi bi-house"></i> Home </a>
+        <a href="sorting.html" id="sort">
+          <i class="fa-regular fa-chart-bar custom-rotate"></i> Sorting
+        </a>
+        <a href="pathfinding.html" id="pFind">
+          <i class="fa-solid fa-route"></i> Pathfinding
+        </a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h2>Sorting Visualizer</h2>
+      <p>Explore how different algorithms organize data in real-time.</p>
+
+      <!-- Control Section -->
+      <div class="controls">
+        <!-- LEFT SIDE CONTROLS -->
+        <div class="controls-left">
+          <div class="slider-group">
+            <span class="slider-label">ALGORITHM</span>
+            <select id="algo">
+              <option value="bubble">Bubble Sort</option>
+              <option value="selection">Selection Sort</option>
+              <option value="insertion">Insertion Sort</option>
+              <option value="merge">Merge Sort</option>
+              <option value="quick">Quick Sort</option>
+              <option value="heap">Heap Sort</option>
+            </select>
+          </div>
+
+          <label class="slider-label">
+            Speed
+            <input type="range" id="speed" min="10" max="300" value="100" />
+          </label>
+
+          <!-- Size button structure -->
+          <label class="slider-label">
+            <div class="label-row">
+              <span>Size:</span>
+              <span id="sizeValue">30</span>
+            </div>
+            <input
+              type="range"
+              id="size"
+              min="10"
+              max="100"
+              step="10"
+              value="30"
+            />
+          </label>
+        </div>
+
+        <!-- RIGHT SIDE BUTTONS -->
+        <div class="controls-right">
+          <button class="primary" id="start">
+            <i class="bi bi-caret-right-fill"></i> Start
+          </button>
+          <button class="secondary" id="reset">
+            <i class="bi bi-arrow-clockwise"></i> Reset
+          </button>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <span>Comparisons: <strong id="comparisons">0</strong></span>
+        <span>Swaps: <strong id="swaps">0</strong></span>
+        <span>Time: <strong id="time">0 ms</strong></span>
+      </div>
+      <div id="array"></div>
+    </main>
+
+    <footer class="algo-details-footer">
+      <div class="footer-content">
+        <div class="details-grid">
+          <div class="details-card stats-card">
+            <h3>Efficiency</h3>
+            <div class="stat-row">
+              <span>Time Complexity:</span>
+              <span id="time-complexity" class="text-blue">-</span>
+            </div>
+            <div class="stat-row">
+              <span>Space Complexity:</span>
+              <span id="space-complexity" class="text-blue">-</span>
+            </div>
+          </div>
+
+          <div class="details-card info-card">
+            <h3>Description</h3>
+            <p id="algo-definition" class="mb-3">
+              Select an algorithm to view its technical details and real-world
+              application.
+            </p>
+            <h3>Example</h3> <p id="algo-example">The example will appear here when you select a sort.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../javascript/sorting.js"></script>
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>

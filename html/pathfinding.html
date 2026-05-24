@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="../css/pathfinding.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo-link">
+        <div class="logo">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span class="logo-name">AlgoFlow</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <div id="nav-box"></div>
+        <a href="index.html" id="home">
+          <i class="bi bi-house"></i> Home
+        </a>
+        <a href="sorting.html" id="sort">
+          <i class="fa-regular fa-chart-bar custom-rotate"></i> Sorting
+        </a>
+        <a href="pathfinding.html" id="pFind">
+          <i class="fa-solid fa-route"></i>  Pathfinding
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="header-section">
+        <h1>Pathfinding Visualizer</h1>
+        <p>
+          Watch how different algorithms map the route from start to finish.
+        </p>
+        <p class="instruction-text">
+          Pick your <span class="origin-text">Origin</span>, set a
+          <span class="target-text">Target</span>, and block paths with
+          <span class="obstacle-text">Obstacles</span>.
+        </p>
+      </div>
+
+      <div class="main-control-panel">
+        <select id="algorithm-select">
+          <option value="BFS">BFS</option>
+          <option value="DFS">DFS</option>
+          <option value="Dijkstra">Dijkstra</option>
+          <option value="IDDFS">Iterative Deepening DFS</option>
+          <option value="GreedyBFS">Greedy BFS</option>
+          <option value="AStar">A *</option>
+        </select>
+        <button id="random-maze-btn">
+          <i class="bi bi-magic"></i> Random Maze
+        </button>
+        <button id="visualize-btn">
+          <i class="bi bi-caret-right-fill"></i>Visualize
+        </button>
+        <button id="reset-btn">
+          <i class="bi bi-arrow-clockwise"></i> Reset
+        </button>
+      </div>
+
+      <div class="grid-window">
+        <div id="grid-container"></div>
+      </div>
+    </main>
+
+    <script type="module" src="../javascript/pathfindig.js"></script>
+    <script src="../javascript/pathfinding.js"></script>
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>

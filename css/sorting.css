@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* dark grey */
+    color: #e5e7eb;
+}
+
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 10px;
+    /* border: 2px solid red; */
+}
+
+.container h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #6098f3; 
+    margin-top: -20px;
+     /* border: 2px solid red; */
+}
+
+.container p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #1a1a1a9e; /* #1a1a1a9e */
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+
+    padding: 16px 20px;
+    margin-bottom: 30px;
+}
+
+/* Algoritm box */
+select {
+    background: #2a2a2a9a;
+    color: #e5e7eb;
+    border: 1px solid #2c2c2c;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    
+} 
+
+.select:active {
+    transform: scale(0.94);
+}
+
+/* Start button */
+.primary {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: #3b82f6;
+    color: white;
+    transition: transform 0.2s ease;
+    /* border-radius: 2px solid red; */
+}
+
+.primary:hover {
+    background-color: #2563eb;
+}
+
+.primary:active {
+    transform: scale(0.94);
+}
+
+/* Reset button */
+.secondary {
+    background-color: #222222;
+    color: #e5e7eb;
+    border: 1px solid #2c2c2c;
+    transition: transform 0.2s ease;
+}
+
+.secondary:hover {
+    background-color: #71686846;
+}
+
+.secondary:active {
+    transform: scale(0.94);
+}
+
+/* Array bars border */
+#array {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 375px;              
+    gap: 4px;
+    padding: 10px;
+    background-color: #1a1a1a9e;
+    border: 1px solid #2c2c2c;
+    border-radius: 8px;
+    /* border: 2px solid red */
+}
+
+/* Array Bars */
+.bar {
+    width: 18px;                
+    background-color: #3b82f6;  
+    border-radius: 2px;
+    will-change: height;
+    
+}
+
+.slider-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input[type="range"] {
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+button.primary,
+button.secondary {
+  height: 40px;          /* fixed height */
+  padding: 0 16px;       /* horizontal padding only */
+  font-size: 14px;
+  border-radius: 8px;
+  box-sizing: border-box;
+} 
+
+/* Div box (Algorithm, speed, size) */
+.controls-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Start and reset buttom */
+.controls-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Size Button */
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Metrics (Comparisons, Swaps, Time) */
+.metrics {
+    display: flex;
+    gap: 20px;              
+    margin-top: -10px;
+    color: #94a3b8;
+    font-size: 14px;
+    /* border: 2px solid yellow; */
+}
+
+/* For AlgoFlow Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    /* Moves logo to the left side while nav-links stay right */
+    margin-right: auto; 
+    transition: transform 0.2s ease;
+}
+
+.logo:active {
+    transform: scale(0.95);
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: #3498db; /* Match your bar color */
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5); /* Subtle glow */
+}
+
+.logo-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif; /* Or your preferred font */
+}
+
+.logo-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Keeps your white and blue colors */
+    display: flex;         /* Ensures the clickable area fits the logo */
+}
+
+.logo:hover {
+    opacity: 0.8;          /* Adds a subtle feedback when you hover */
+    transition: 0.3s;
+}
+
+
+
+/* For Footer style */
+.algo-details-footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background: #0f172a; /* Slightly lighter than your main black background */
+    border-top: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.details-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 3px solid #3498db;
+}
+
+.details-card h3 {
+    font-size: 1.1rem;
+    color: #3498db;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'Fira Code', monospace;
+}
+
+.example-text {
+    margin-top: 15px;
+    font-style: italic;
+    color: #60a5fa; /* A lighter blue */
+    font-size: 0.9rem;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 15px 0;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------------------------------------- */
+
+.info-card h3 {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-card h3:first-child {
+    margin-top: 0; /* Remove top margin from the very first header */
+}
+
+#algo-definition, #algo-example {
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin-bottom: 15px;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,62 @@
+/* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #2c2c2c;
+    /* border: 2px solid red; 20,60*/
+}
+
+.nav-links a {
+    color: #888;  
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16.5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+} 
+
+/* Starts from here */
+.nav-links {
+    position: relative; /* This is the "track" for the box */
+    display: flex;
+    align-items: center;
+    left: -20px;
+    /* border: 1px solid red; */
+}
+
+#nav-box {
+    position: absolute;
+    height: 35px;
+    background: #333; /* Dark box color */
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1; /* Keeps the box BEHIND the text */
+    left: 0;
+    width: 0;
+    opacity: 0; /* Hidden until a link is active */
+    /* border-radius: 2px solid red; */
+}
+
+/* Optional: Keep the active link white */
+.nav-links a.active {
+    color: #fff;
+}
+
+/* Sorting logo rotation */
+.custom-rotate {
+    display: inline-block; /* Crucial: transforms don't work on 'inline' elements */
+
+    /* This rotates it 90 degrees AND flips it horizontally */
+    transform: rotate(90deg) scaleX(-1);
+
+    /* Optional: adjust the alignment if it looks "off-center" after rotating */
+    vertical-align: middle;
+}
