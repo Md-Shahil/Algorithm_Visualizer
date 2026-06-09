@@ -1,6 +1,7 @@
 # Algorithm Visualizer
 
-A responsive and high‑performance web application designed to simplify complex computer science concepts. The platform delivers real‑time, 60 FPS visual simulations that illustrate pathfinding algorithms, graph theory, and sorting techniques. By converting abstract logic into clear, step‑by‑step visual states, it enables users to intuitively understand and engage with fundamental computational processes.
+A responsive and high-performance web application designed to simplify complex computer science concepts. The platform delivers real-time, 60 FPS visual simulations that illustrate pathfinding algorithms, graph theory, and sorting techniques. By converting abstract logic into clear, step-by-step visual states, it enables users to intuitively understand and engage with fundamental computational processes.
+
 ---
 
 ## 🚀 Live Demo & Repository
