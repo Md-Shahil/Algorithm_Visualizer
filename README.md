@@ -107,8 +107,7 @@ Building a real-time visualizer sounds easy, but scaling it revealed big perform
   - **Pathfinding:** Coloring thousands of grid cells at once locks the UI.  
   - **Sorting:** Recursive loops in Merge Sort or Quick Sort stall the interface.  
 - **Fix:** Split logic from visuals. The algorithm builds an **operation queue** instantly, while a timing controller (using Promises and `setTimeout`) plays it back slowly, keeping the UI smooth.
-
----
+  
 
 ### 2. Screen Stuttering During Animations
 - **Problem:** Rapid color changes or element swaps force the browser to recalculate pixels thousands of times, causing lag.  
@@ -117,18 +116,8 @@ Building a real-time visualizer sounds easy, but scaling it revealed big perform
   - **Sorting:** Moving bars or resizing them too quickly.  
 - **Fix:** Use **GPU Hardware Acceleration**. Instead of recalculating positions in JavaScript, swap CSS class names (like `visited` or `swapping`). The graphics card handles smooth transitions at 60 FPS.
 
----
 
-### 3. Interruptions Breaking Animations
-- **Problem:** If a user resets or switches modes mid-animation, old loops keep running. This causes ghost paths, flashing blocks, or broken bar heights.  
-- **Examples:**  
-  - **Pathfinding:** Reset leaves leftover paths or clears walls unexpectedly.  
-  - **Sorting:** Changing array size mid-sort crashes with “undefined” errors.  
-- **Fix:** Added a global **Animation Abort Signal**. Reset instantly cancels all active promises and clears the queue, restoring a clean slate before new actions.
-
----
-
-### 4. Scaling Limits with Large Data
+### 3. Scaling Limits with Large Data
 - **Problem:** Works fine with small datasets, but huge grids or arrays overload memory and slow performance.  
 - **Examples:**  
   - **Pathfinding:** Deep recursive loops hit memory limits.  
@@ -143,7 +132,7 @@ Since this project runs entirely on native web standards, it has zero external d
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/Md-Shahil/algorithm-visualizer.git](https://github.com/Md-Shahil/algorithm-visualizer.git)
+git clone [https://github.com/Md-Shahil/Algorithm_Visualizer.git]
 
 # 2. Navigate into the project directory
 cd algorithm-visualizer
